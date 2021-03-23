@@ -3,25 +3,14 @@ package TorneoTenis;
 import java.util.Scanner;
 
 public class Torneo {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         String [] nombres=new String[8];
         Scanner sc=new Scanner(System.in);
-        System.out.println("Jugador 1: ");
-        nombres[0]=sc.nextLine();
-        System.out.println("Jugador 2: ");
-        nombres[1]=sc.nextLine();
-        System.out.println("Jugador 3: ");
-        nombres[2]=sc.nextLine();
-        System.out.println("Jugador 4: ");
-        nombres[3]=sc.nextLine();
-        System.out.println("Jugador 5: ");
-        nombres[4]=sc.nextLine();
-        System.out.println("Jugador 6: ");
-        nombres[5]=sc.nextLine();
-        System.out.println("Jugador 7: ");
-        nombres[6]=sc.nextLine();
-        System.out.println("Jugador 8: ");
-        nombres[7]=sc.nextLine();
+
+        for (int i = 1; i < nombres.length+1; i++) {
+            System.out.println("Jugador "+ i +": ");
+            nombres[i-1]=sc.nextLine();
+        }
 
         System.out.println("Ronda 1");
         System.out.println("a."+nombres[0] + " - " + "b."+nombres[1]);
