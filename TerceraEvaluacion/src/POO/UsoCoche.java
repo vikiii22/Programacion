@@ -18,7 +18,7 @@ public class UsoCoche {
 
         Coche suPutaMadre=new Coche();
         suPutaMadre.ponmeNombre("Me cago en la hostia");
-        suPutaMadre.estableceColor("negro de la flipar");
+        suPutaMadre.estableceColor("negro de flipar");
         System.out.println("El coche "+ suPutaMadre.miraMiNombre() + " tiene un color " + suPutaMadre.verColor() + " y tiene " + suPutaMadre);
     }
 }
