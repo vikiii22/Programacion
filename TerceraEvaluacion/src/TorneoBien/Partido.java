@@ -11,13 +11,33 @@ public class Partido {
     protected final JButton boton2;
     protected final JPanel panel;
 
-    public Partido(){
+    Ronda ronda;
+    public Partido(Ronda ronda){
+        this.ronda=ronda;
         boton1=new JButton("???????");
         boton2=new JButton("???????");
+        boton1.addActionListener(e -> ganaJugador1());
+        boton2.addActionListener(e -> ganaJugador2());
         jugador1=null;
         jugador2=null;
         panel=new JPanel();
         inicializaPanel();
+    }
+
+    private void ganaJugador1(){
+        boton2.setEnabled(false);
+        boton1.setEnabled(false);
+        //ronda.gana(jugador1);
+        boton1.setBackground(new Color(200, 255, 0));
+        boton1.setForeground(new Color(20, 20, 20));
+    }
+
+    private void ganaJugador2(){
+        boton2.setEnabled(false);
+        boton1.setEnabled(false);
+        //ronda.gana(jugador1);
+        boton2.setBackground(new Color(200, 255, 0));
+        boton2.setForeground(new Color(20, 20, 20));
     }
 
     public String getJugador1() {
@@ -72,17 +92,17 @@ public class Partido {
         JPanel temp=new JPanel(new GridLayout(0,1));
         ventana.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         ventana.add(temp);
-        Partido p =new Partido();
+        Partido p =new Partido(null);
         temp.add(p.getPanel());
         p.anyadeJugador("Nadal");
         p.anyadeJugador("Federer");
-        Partido p2=new Partido();
+        Partido p2=new Partido(null);
         temp.add(p2.getPanel());
         p2.anyadeJugador("Carlos");
         p2.anyadeJugador("JJ");
-        Partido p3=new Partido();
+        Partido p3=new Partido(null);
         temp.add(p3.getPanel());
-        Partido p4 =new Partido();
+        Partido p4 =new Partido(null);
         temp.add(p4.getPanel());
         //ventana.add(p.getPanel());
 

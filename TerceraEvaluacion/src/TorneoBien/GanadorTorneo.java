@@ -8,7 +8,8 @@ public class GanadorTorneo {
     private final JButton ganador;
 
     public GanadorTorneo(){
-        panel=new JPanel(new GridLayout(1,0));
+        panel=new JPanel();
+        panel.setLayout(new GridLayout(1,0));
         ganador=new JButton("\uD83C\uDFC6");
         ganador.setEnabled(false);
         panel.add(ganador);

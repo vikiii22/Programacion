@@ -15,7 +15,7 @@ public class Ronda {
         partidos=new Partido[numeroPartidos];
         panel=new JPanel(new GridLayout (0,1));
         for (int i = 0; i < partidos.length; i++) {
-            partidos[i]=new Partido();
+            //partidos[i]=new Partido();
             panel.add(partidos[i].getPanel());
         }
     }
