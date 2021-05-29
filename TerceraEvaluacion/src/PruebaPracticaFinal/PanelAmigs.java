@@ -8,11 +8,11 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PanelAmigs {
-    public static final JPanel panel = new JPanel();
+/*public class PanelAmigs {
+    public static final JPanel panel;
     List<MiBotonAmigo> botones;
     PanelAmigs() throws IOException {
-        //panel=new JPanel();
+        panel=new JPanel();
         //panel.setLayout(0,2);
         botones=new ArrayList<>();
         rellenaBotonesDeFichero();
@@ -60,4 +60,4 @@ class MiBotonAmigo {
         this.nombre=nombre;
         this.cantidad=cantidad;
     }
-}
+}*/
