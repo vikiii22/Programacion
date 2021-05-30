@@ -13,7 +13,7 @@ public class LeerTextoPequenyo {
     public static void main(String[] args) {
         Path path=Paths.get("caminante.txt");
         Charset charset=StandardCharsets.UTF_8;
-        List<String> lineas = new ArrayList<>();
+        List<String> lineas=new ArrayList<>();
         try{
             lineas=Files.readAllLines(path, charset);
             for (String l:lineas) {
