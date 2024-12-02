@@ -1,5 +1,3 @@
-package practica4;
-
 public class CuentaCorrienteApp {
     public static void main(String[] args) {
 
@@ -20,5 +18,16 @@ public class CuentaCorrienteApp {
         //Intentar extraer dinero de ambas cuentas
         cuenta1.sacar(500); 
         cuenta2.sacar(400);
+
+        // Realizar una transferencia de la cuenta1 a la cuenta2
+        System.out.println("\nHacer transferencia de 200€ desde cuenta1 a cuenta2:");
+        cuenta1.transferir(cuenta2, 200);
+
+        // Mostrar información actualizada de las cuentas
+        System.out.println("\nInformación actualizada de la cuenta 1:");
+        cuenta1.mostrarInformacion();
+        System.out.println("\nInformación actualizada de la cuenta 2:");
+        cuenta2.mostrarInformacion();
+
     }
 }

@@ -1,5 +1,3 @@
-package practica4;
-
 public class CuentaCorriente {
     // Atributos privados
     private String dni;
@@ -42,5 +40,16 @@ public class CuentaCorriente {
         System.out.println("DNI: " + dni);
         System.out.println("Saldo: " + saldo + "\n");
     }
+
+    // Metodo para transferir dinero a otra cuenta
+    public boolean transferir(CuentaCorriente otraCuenta, double cantidad) {
+        if (cantidad > 0 && this.sacar(cantidad)) {
+            otraCuenta.ingresar(cantidad);
+            System.out.println("Transferencia de " + cantidad + " realizada correctamente a la cuenta de " + otraCuenta.nombre);
+            return true;
+        } else {
+            System.out.println("Transferencia fallida. Verifique la cantidad o el saldo.");
+            return false;
+        }
+    }
 }
-//
